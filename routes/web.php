@@ -17,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () { return view('welcome');});
 
 Route::get('/song/create', [SongController::class, 'create'])->name('song.create');
+
+Route::get('/song/index', [SongController::class, 'show'])->name('song.index');
