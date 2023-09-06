@@ -28,7 +28,7 @@ class SongController extends Controller
      */
     public function store(Request $request)
     {
-
+        return view('song.index');
     }
 
     /**
@@ -36,7 +36,7 @@ class SongController extends Controller
      */
     public function show(Song $song)
     {
-       return view('song.index');
+       
     }
 
     /**
