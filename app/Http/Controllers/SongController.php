@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class SongController extends Controller
 {
+
+ public function welcome(){ 
+    return view('welcome');
+  }
+
+
     /**
      * Display a listing of the resource.
      */

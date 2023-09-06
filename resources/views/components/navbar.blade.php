@@ -7,11 +7,15 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="">Home</a>
+          <a class="nav-link active" aria-current="page" href="{{route('welcome')}}">Home</a>
         </li>
         
         <li class="nav-item">
-          <a class="nav-link" href="{{route('song.create')}}">CREA PRODOTTI</a>
+          <a class="nav-link" href="{{route('song.create')}}">AGGIUNGI CANZONE</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{{route('song.index')}}">STORE</a>
         </li>
        
         <li class="nav-item dropdown">
@@ -24,9 +28,6 @@
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
         </li>
       </ul>
 

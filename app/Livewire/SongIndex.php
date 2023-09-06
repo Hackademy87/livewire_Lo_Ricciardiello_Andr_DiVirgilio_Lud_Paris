@@ -7,6 +7,11 @@ use Livewire\Component;
 
 class SongIndex extends Component
 {
+
+  public function delete($id){
+    Song::find($id)->delete();
+}
+
     public function render()
     {
 
