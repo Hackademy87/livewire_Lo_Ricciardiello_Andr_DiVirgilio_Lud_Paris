@@ -20,7 +20,7 @@ class SongController extends Controller
      */
     public function create()
     {
-        //
+        return view('song.create');
     }
 
     /**
@@ -28,7 +28,7 @@ class SongController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**
