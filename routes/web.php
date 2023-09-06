@@ -18,4 +18,6 @@ Route::get('/', function () { return view('welcome');});
 
 Route::get('/song/create', [SongController::class, 'create'])->name('song.create');
 
-Route::get('/song/index', [SongController::class, 'store'])->name('song.index');
+Route::get('/song/index', [SongController::class, 'index'])->name('song.index');
+
+Route::get('/song/edit/{song}', [SongController::class, 'edit'])->name('song.edit');
