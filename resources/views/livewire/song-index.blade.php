@@ -14,6 +14,8 @@
         <p class="card-text">{{$song->price}}€</p>
         <p class="card-text">{{$song->category}}</p>
         </div>
+        <a href="{{ route('song.edit', $song) }}" class="btn btn-secondary" >Modifica</a>
+                    <button class="btn btn-danger" wire:click="delete({{ $song->id }})">Cancella</button>
     </div>
     </div>
     @endforeach

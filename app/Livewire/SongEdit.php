@@ -10,7 +10,7 @@ class SongEdit extends Component
 
 
 
-    public $title;
+    public $name;
     public $author;
     public $category;
     public $price;
@@ -20,7 +20,7 @@ class SongEdit extends Component
         $this->songId = $songid;
 
         $song = Song::find($songid);
-        $this->title = $song->title;
+        $this->name = $song->name;
         $this->author = $song->author;
         $this->category = $song->category;
         $this->price = $song->price;
@@ -30,7 +30,7 @@ class SongEdit extends Component
         $song = Song::find($this->songId);
         $song->update(
             [
-                'title' => $this->name,
+                'name' => $this->name,
                 'author' => $this->author,
                 'category' => $this->category,
                 'price'=> $this->price

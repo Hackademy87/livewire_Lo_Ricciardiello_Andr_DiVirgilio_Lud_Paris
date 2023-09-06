@@ -3,7 +3,7 @@
 <form wire:submit.prevent="update">
     <div class="mb-3">
         <label class="form-label">Nome</label>
-        <input wire:model.blur="title" type="text" class="form-control">
+        <input wire:model.blur="name" type="text" class="form-control">
         <div class="text-danger">@error('name') {{ $message }} @enderror</div>
     </div>
     <div class="mb-3">
