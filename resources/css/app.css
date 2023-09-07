@@ -1,1 +1,39 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
+
+
+
+
+nav{
+    position: fixed;
+    z-index: 99;
+  }
+
+  
+.navbar-blur{
+  backdrop-filter: blur(9px) saturate(0.8);
+  
+}
+
+
+
+
+a{
+    text-decoration: none;
+    font-family: monospace;
+    color: black;
+  }
+
+
+  .card{
+    box-shadow:5px 2px 5px 5px lightgrey;
+    border: none;
+    border-radius: 10%;
+    transform: scale(1);
+    transition: 1s cubic-bezier(0.215, 0.610, 0.355, 1);
+    height: 400px;
+    width: 250px;
+}
+.card:hover{
+    transform: scale(1.1);
+    transition:1s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
