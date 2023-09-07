@@ -6,6 +6,7 @@
     @foreach($songs as $song)
     <div class="col-12 col-md-3 my-5">
         <div class="card">
+        <img style="width:100px;" src="{{ Storage::url($song->img) }}" alt="{{ $song->name }}">
         <div class="card-body text-center">
             <h5 class="card-title">{{$song->name}}</h5>
             <p class="card-text">{{$song->id}}</p>

@@ -27,7 +27,11 @@
       <div class="text-danger">@error('price') {{ $message }} @enderror</div>
     </div>
 
-    
+    <div class="mb-3">
+        <label  class="form-label">Copertina</label>
+        <input type="file" class="form-control" wire:model="img">
+        <div class="text-danger">@error('img') {{ $message }} @enderror</div>
+    </div>
 
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>

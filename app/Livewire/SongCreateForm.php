@@ -4,21 +4,27 @@ namespace App\Livewire;
 
 use App\Models\Song;
 use Livewire\Component;
+use Livewire\WithFileUploads;
+use Livewire\Attributes\Rule;
 
 class SongCreateForm extends Component
 {
-
+    use WithFileUploads;
     public $name;
     public $author;
     public $category;
     public $price;
 
-    public $rules = [
-        'name' => 'required|min:10',
-        'author' => 'required|min:3',
-        'category' => 'required|min:4',
-        'price' => 'required'
-    ];
+ // #[Rule('image|max:1024')]
+ public $img;
+
+ protected $rules = [
+    'name' => 'required|min:3',
+    'author' => 'required|min:5',
+    'category'=> 'required|min:4',
+    'price' => 'required|min:2',
+    'img' => 'image|max:1024'
+];
 
     protected $messages = [
         'name.required' => "Il titolo non puo' essere vuoto"
@@ -33,9 +39,15 @@ class SongCreateForm extends Component
             'author'=>$this->author,
             'category'=>$this->category,
             'price'=>$this->price,
+            'img'=> $this->img->store('public/songs')
         ]);
         $this->reset();
     }
+
+    public function updated($property){
+        $this->validateOnly($property);
+    }
+
 
     public function render()
     {
